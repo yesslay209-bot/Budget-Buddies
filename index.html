@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#173c40" />
+    <title>Pocket Bloom | A kinder way to save</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Nunito:wght@600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <svg class="svg-sprite" aria-hidden="true" focusable="false">
+      <symbol id="icon-sprout" viewBox="0 0 24 24">
+        <path d="M12 21V10.8" />
+        <path d="M12 12.2C8.4 12.2 5.8 10 5.8 6c3.9-.1 6.2 1.9 6.2 6.2Z" />
+        <path d="M12 10.5C12 6.5 14.4 3.8 18.7 3.7c.1 4.3-2.2 6.8-6.7 6.8Z" />
+        <path d="M8.2 21h7.6" />
+      </symbol>
+      <symbol id="icon-overview" viewBox="0 0 24 24">
+        <rect x="4" y="4" width="6" height="6" rx="1.5" />
+        <rect x="14" y="4" width="6" height="6" rx="1.5" />
+        <rect x="4" y="14" width="6" height="6" rx="1.5" />
+        <rect x="14" y="14" width="6" height="6" rx="1.5" />
+      </symbol>
+      <symbol id="icon-activity" viewBox="0 0 24 24">
+        <path d="M4 18.5 9 13l3.6 3.2L20 8" />
+        <path d="M15.7 8H20v4.3" />
+        <path d="M4 20h16" />
+      </symbol>
+      <symbol id="icon-settings" viewBox="0 0 24 24">
+        <path d="M12 8.6a3.4 3.4 0 1 0 0 6.8 3.4 3.4 0 0 0 0-6.8Z" />
+        <path d="m19.2 13.4 1.1.9-1.7 2.9-1.3-.5a7.8 7.8 0 0 1-1.8 1l-.2 1.4h-3.4l-.2-1.4a7.8 7.8 0 0 1-1.8-1l-1.3.5-1.7-2.9 1.1-.9a7.6 7.6 0 0 1 0-2.8l-1.1-.9 1.7-2.9 1.3.5a7.8 7.8 0 0 1 1.8-1l.2-1.4h3.4l.2 1.4a7.8 7.8 0 0 1 1.8 1l1.3-.5 1.7 2.9-1.1.9a7.6 7.6 0 0 1 0 2.8Z" />
+      </symbol>
+      <symbol id="icon-plus" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12h14" />
+      </symbol>
+      <symbol id="icon-edit" viewBox="0 0 24 24">
+        <path d="m14.5 5.5 4 4" />
+        <path d="M5 19l.9-4.2L16.8 3.9a2.1 2.1 0 0 1 3 3L8.1 17.8 5 19Z" />
+      </symbol>
+      <symbol id="icon-arrow-in" viewBox="0 0 24 24">
+        <path d="M12 4v13" />
+        <path d="m6.5 11.5 5.5 5.5 5.5-5.5" />
+        <path d="M5 20h14" />
+      </symbol>
+      <symbol id="icon-arrow-out" viewBox="0 0 24 24">
+        <path d="M12 20V7" />
+        <path d="m6.5 12.5 5.5-5.5 5.5 5.5" />
+        <path d="M5 4h14" />
+      </symbol>
+      <symbol id="icon-calendar" viewBox="0 0 24 24">
+        <rect x="4" y="5.5" width="16" height="14" rx="2" />
+        <path d="M8 3.5v4M16 3.5v4M4 10h16" />
+        <path d="M8 14h.01M12 14h.01M16 14h.01M8 17h.01M12 17h.01" />
+      </symbol>
+      <symbol id="icon-target" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="12" cy="12" r="1" />
+      </symbol>
+      <symbol id="icon-sparkle" viewBox="0 0 24 24">
+        <path d="m12 3 1.5 6.5L20 11l-6.5 1.5L12 19l-1.5-6.5L4 11l6.5-1.5L12 3Z" />
+        <path d="m19 16 .6 2.4L22 19l-2.4.6L19 22l-.6-2.4L16 19l2.4-.6L19 16Z" />
+      </symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8" />
+        <path d="M12 7v5l3.2 2" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8.5" />
+        <path d="m8 12.2 2.5 2.5 5.5-5.5" />
+      </symbol>
+      <symbol id="icon-trash" viewBox="0 0 24 24">
+        <path d="M5 7h14M10 4h4l1 3H9l1-3ZM8 7l.7 13h6.6L16 7M10 10v6M14 10v6" />
+      </symbol>
+      <symbol id="icon-menu" viewBox="0 0 24 24">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24">
+        <path d="m6 6 12 12M18 6 6 18" />
+      </symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+        <path d="M5 12h13M13 6l6 6-6 6" />
+      </symbol>
+      <symbol id="icon-wallet" viewBox="0 0 24 24">
+        <path d="M5 6.5A2.5 2.5 0 0 1 7.5 4H19v16H7.5A2.5 2.5 0 0 1 5 17.5v-11Z" />
+        <path d="M5 7h14v4H5M16 13h3M16 15h.01" />
+      </symbol>
+    </svg>
+
+    <div class="mobile-overlay" id="sidebar-overlay" hidden></div>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-top">
+          <a class="brand" href="#overview" aria-label="Pocket Bloom home">
+            <span class="brand-mark"><svg class="icon icon-lg"><use href="#icon-sprout"></use></svg></span>
+            <span class="brand-copy"><strong>Pocket</strong><em>bloom</em></span>
+          </a>
+          <button class="icon-button sidebar-close" id="sidebar-close" type="button" aria-label="Close navigation">
+            <svg class="icon"><use href="#icon-close"></use></svg>
+          </button>
+        </div>
+
+        <div class="nav-heading">YOUR SPACE</div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="nav-item active" href="#overview">
+            <svg class="icon"><use href="#icon-overview"></use></svg>
+            <span>Overview</span>
+          </a>
+          <a class="nav-item" href="#activity">
+            <svg class="icon"><use href="#icon-activity"></use></svg>
+            <span>Activity</span>
+            <span class="nav-count" id="nav-count">0</span>
+          </a>
+          <button class="nav-item nav-button" type="button" data-open-goal>
+            <svg class="icon"><use href="#icon-settings"></use></svg>
+            <span>Goal settings</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-spacer"></div>
+        <div class="sidebar-note">
+          <span class="note-icon"><svg class="icon"><use href="#icon-sparkle"></use></svg></span>
+          <p><strong>Small steps count.</strong><br />Your future self is already cheering.</p>
+        </div>
+        <div class="profile-chip">
+          <span class="profile-avatar">S</span>
+          <span><strong>Sophie</strong><small>My garden</small></span>
+          <svg class="icon profile-arrow"><use href="#icon-arrow-right"></use></svg>
+        </div>
+      </aside>
+
+      <main class="main-content" id="overview">
+        <header class="topbar">
+          <button class="icon-button menu-button" id="menu-toggle" type="button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">
+            <svg class="icon"><use href="#icon-menu"></use></svg>
+          </button>
+          <div class="today-label"><span class="today-dot"></span><span id="topbar-date">Today</span></div>
+          <div class="topbar-actions">
+            <div class="save-status"><span class="save-dot"></span><span>Saved locally</span></div>
+            <button class="top-avatar" type="button" data-open-goal aria-label="Open profile and goal settings">S</button>
+          </div>
+        </header>
+
+        <div class="content-wrap">
+          <section class="page-heading" aria-labelledby="page-title">
+            <div>
+              <p class="eyebrow">A kinder way to budget</p>
+              <h1 id="page-title">Make room for a little <span>magic.</span></h1>
+              <p class="page-intro">Keep an eye on your money, and watch your goal grow with it.</p>
+            </div>
+            <button class="button button-secondary heading-action" type="button" data-open-goal>
+              <svg class="icon"><use href="#icon-settings"></use></svg>
+              Edit goal
+            </button>
+          </section>
+
+          <section class="hero-grid" aria-label="Savings overview">
+            <article class="goal-card">
+              <div class="goal-card-top">
+                <div>
+                  <p class="card-label light-label"><svg class="icon"><use href="#icon-target"></use></svg> CURRENT GOAL</p>
+                  <h2 id="goal-name">Pokémon booster box</h2>
+                </div>
+                <button class="round-button light-round" type="button" data-open-goal aria-label="Edit savings goal">
+                  <svg class="icon"><use href="#icon-edit"></use></svg>
+                </button>
+              </div>
+              <div class="goal-amount-row">
+                <div class="goal-amount"><span id="goal-saved">$0.00</span><small>of <span id="goal-target">$0.00</span></small></div>
+                <span class="status-pill" id="goal-status"><span class="status-dot" id="goal-status-dot"></span><span id="goal-status-text">On track</span></span>
+              </div>
+              <div class="progress-track dark-track" aria-label="Savings progress">
+                <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+              </div>
+              <div class="goal-progress-meta"><span id="goal-percent">0% grown</span><span id="goal-remaining">$0.00 to go</span></div>
+              <div class="goal-card-footer">
+                <div class="goal-detail"><span class="detail-icon"><svg class="icon"><use href="#icon-calendar"></use></svg></span><span><small>Target date</small><strong id="goal-date">Not set</strong></span></div>
+                <div class="goal-detail"><span class="detail-icon"><svg class="icon"><use href="#icon-clock"></use></svg></span><span><small>Time left</small><strong id="goal-days">--</strong></span></div>
+              </div>
+            </article>
+
+            <article class="companion-card">
+              <div class="companion-header">
+                <div>
+                  <p class="card-label">YOUR SAVINGS GARDEN</p>
+                  <h2>Meet your little buddy</h2>
+                </div>
+                <span class="stage-chip" id="stage-label">Seedling</span>
+              </div>
+              <div class="garden-scene stage-0" id="companion-scene" role="img" aria-label="A savings companion growing in a garden">
+                <div class="scene-sun"></div>
+                <div class="scene-cloud cloud-one"></div>
+                <div class="scene-cloud cloud-two"></div>
+                <div class="scene-hill hill-back"></div>
+                <div class="scene-hill hill-front"></div>
+                <div class="scene-sparkle sparkle-one"><svg class="icon"><use href="#icon-sparkle"></use></svg></div>
+                <div class="scene-sparkle sparkle-two"><svg class="icon"><use href="#icon-sparkle"></use></svg></div>
+                <span class="fallen-leaf" aria-hidden="true"></span>
+                <svg class="garden-art" viewBox="0 0 440 214" aria-hidden="true">
+                  <g class="growth growth-seed">
+                    <ellipse cx="220" cy="177" rx="13" ry="9" fill="#9c603d" />
+                    <path d="M214 174c1-7 4-11 7-14 3 3 5 7 5 14" fill="#b87547" />
+                    <g class="seed-face">
+                      <circle cx="216" cy="171" r="1.8" fill="#604b54" />
+                      <circle cx="224" cy="171" r="1.8" fill="#604b54" />
+                      <path d="M217 175q3 3 6 0" fill="none" stroke="#604b54" stroke-width="1.4" stroke-linecap="round" />
+                    </g>
+                  </g>
+                  <g class="growth growth-sprout">
+                    <path d="M220 177V112" stroke="#397952" stroke-width="7" stroke-linecap="round" />
+                    <path class="leaf sprout-leaf-left" d="M218 137c-20 0-30-10-32-26 16-2 28 5 32 19" fill="#64ad74" stroke="#397952" stroke-width="2" stroke-linejoin="round" />
+                    <path class="leaf sprout-leaf-right" d="M222 126c18-2 28-11 29-26-15-1-26 6-29 19" fill="#81c984" stroke="#397952" stroke-width="2" stroke-linejoin="round" />
+                    <g class="buddy-face">
+                      <ellipse cx="220" cy="111" rx="15" ry="13" fill="#ffd477" stroke="#d89558" stroke-width="2" />
+                      <circle cx="215" cy="109" r="2" fill="#604b54" />
+                      <circle cx="225" cy="109" r="2" fill="#604b54" />
+                      <ellipse cx="211" cy="114" rx="3" ry="1.8" fill="#f09a8d" opacity=".72" />
+                      <ellipse cx="229" cy="114" rx="3" ry="1.8" fill="#f09a8d" opacity=".72" />
+                      <path d="M216 115q4 5 8 0" fill="none" stroke="#604b54" stroke-width="1.7" stroke-linecap="round" />
+                    </g>
+                  </g>
+                  <g class="growth growth-leafy">
+                    <path class="leaf leafy-leaf-left" d="M220 146c-19-15-30-25-33-40 16 1 29 10 33 25" fill="#32805d" stroke="#28664f" stroke-width="2" stroke-linejoin="round" />
+                    <path class="leaf leafy-leaf-right" d="M220 148c22-17 34-28 36-44-17 1-31 11-36 28" fill="#4a9e67" stroke="#28664f" stroke-width="2" stroke-linejoin="round" />
+                    <path class="leaf leafy-leaf-high-left" d="M219 128c-14-13-21-24-20-36 13 2 22 10 24 22" fill="#77bd75" stroke="#397952" stroke-width="2" stroke-linejoin="round" />
+                    <path class="leaf leafy-leaf-high-right" d="M222 119c13-13 23-20 36-20-2 13-12 22-27 25" fill="#6ab66d" stroke="#397952" stroke-width="2" stroke-linejoin="round" />
+                  </g>
+                  <g class="growth growth-bloom">
+                    <path d="M220 126V82" stroke="#397952" stroke-width="7" stroke-linecap="round" />
+                    <path d="M220 102c-18-12-27-21-27-34 14 1 25 9 29 21" fill="#4b9966" stroke="#397952" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M221 96c18-12 28-22 28-35-15 1-26 10-30 23" fill="#5aac6e" stroke="#397952" stroke-width="2" stroke-linejoin="round" />
+                    <g transform="translate(220 68)">
+                      <circle r="10" fill="#f5b655" />
+                      <circle class="bloom-petal petal-top" cy="-12" r="9" fill="#ef8272" />
+                      <circle class="bloom-petal petal-right" cx="11" cy="-4" r="9" fill="#f39a76" />
+                      <circle class="bloom-petal petal-bottom-right" cx="7" cy="9" r="9" fill="#ef8272" />
+                      <circle class="bloom-petal petal-bottom-left" cx="-8" cy="9" r="9" fill="#f39a76" />
+                      <circle class="bloom-petal petal-left" cx="-11" cy="-4" r="9" fill="#ef8272" />
+                      <circle r="5" fill="#fbd56e" />
+                      <circle cx="-3" cy="-1" r="1.6" fill="#604b54" />
+                      <circle cx="3" cy="-1" r="1.6" fill="#604b54" />
+                      <path d="M-3 4q3 3 6 0" fill="none" stroke="#604b54" stroke-width="1.3" stroke-linecap="round" />
+                    </g>
+                  </g>
+                  <g class="growth growth-complete">
+                    <path d="M220 91V48" stroke="#397952" stroke-width="7" stroke-linecap="round" />
+                    <path d="M220 68c-19-12-28-23-27-36 15 2 26 11 29 25" fill="#398b5e" stroke="#28664f" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M221 62c18-13 27-24 26-38-15 3-25 12-28 26" fill="#56ae6d" stroke="#28664f" stroke-width="2" stroke-linejoin="round" />
+                    <g transform="translate(220 38)">
+                      <circle r="11" fill="#f8c35e" />
+                      <circle class="bloom-petal petal-top" cy="-14" r="10" fill="#ef8070" />
+                      <circle class="bloom-petal petal-right" cx="13" cy="-5" r="10" fill="#f19b76" />
+                      <circle class="bloom-petal petal-bottom-right" cx="8" cy="11" r="10" fill="#ef8070" />
+                      <circle class="bloom-petal petal-bottom-left" cx="-9" cy="11" r="10" fill="#f19b76" />
+                      <circle class="bloom-petal petal-left" cx="-13" cy="-5" r="10" fill="#ef8070" />
+                      <circle r="5" fill="#ffe084" />
+                      <circle cx="-3" cy="-1" r="1.7" fill="#604b54" />
+                      <circle cx="3" cy="-1" r="1.7" fill="#604b54" />
+                      <path d="M-3 4q3 3 6 0" fill="none" stroke="#604b54" stroke-width="1.3" stroke-linecap="round" />
+                    </g>
+                  </g>
+                  <g class="garden-pot">
+                    <path d="M178 167h84l-9 40h-66l-9-40Z" fill="#e58b72" stroke="#bd6658" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M174 163h92v12h-92z" fill="#c96f5a" stroke="#bd6658" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M190 182h60" stroke="#e69571" stroke-width="4" stroke-linecap="round" opacity=".7" />
+                    <path d="M193 195h54" stroke="#b95e4b" stroke-width="3" stroke-linecap="round" opacity=".6" />
+                    <g class="pot-face">
+                      <circle cx="209" cy="184" r="2" fill="#604b54" />
+                      <circle cx="231" cy="184" r="2" fill="#604b54" />
+                      <ellipse cx="203" cy="189" rx="5" ry="2.5" fill="#f5a094" opacity=".72" />
+                      <ellipse cx="237" cy="189" rx="5" ry="2.5" fill="#f5a094" opacity=".72" />
+                      <path d="M214 190q6 6 12 0" fill="none" stroke="#604b54" stroke-width="1.8" stroke-linecap="round" />
+                    </g>
+                    <path d="M220 199c-2-3-7-1-5 2 2 3 5 5 5 5s3-2 5-5c2-3-3-5-5-2Z" fill="#f6c65d" />
+                  </g>
+                </svg>
+              </div>
+              <div class="companion-footer">
+                <div><strong id="companion-title">Your little buddy is waiting.</strong><span id="companion-copy">Every saved dollar gives it a little more room to grow.</span></div>
+                <span class="companion-percent" id="companion-progress">0%</span>
+              </div>
+            </article>
+          </section>
+
+          <section class="care-alert" id="care-alert" role="status" aria-live="polite" hidden>
+            <span class="care-alert-icon"><svg class="icon"><use href="#icon-sprout"></use></svg></span>
+            <div><strong id="care-alert-title">Your buddy needs a little water.</strong><span id="care-alert-copy">Save something soon to keep its next leaf safe.</span></div>
+            <span class="care-countdown" id="care-countdown">3 days</span>
+          </section>
+
+          <section class="stats-grid" aria-label="Spending summary">
+            <article class="stat-card">
+              <div class="stat-top"><span class="stat-icon mint-icon"><svg class="icon"><use href="#icon-wallet"></use></svg></span><span class="stat-trend positive">TOTAL SAVED</span></div>
+              <strong id="stat-saved">$0.00</strong>
+              <span class="stat-caption">Your current balance toward the goal</span>
+            </article>
+            <article class="stat-card">
+              <div class="stat-top"><span class="stat-icon lilac-icon"><svg class="icon"><use href="#icon-arrow-in"></use></svg></span><span class="stat-trend">THIS MONTH</span></div>
+              <strong id="stat-month-in">$0.00</strong>
+              <span class="stat-caption">Money that found its way in</span>
+            </article>
+            <article class="stat-card">
+              <div class="stat-top"><span class="stat-icon peach-icon"><svg class="icon"><use href="#icon-arrow-out"></use></svg></span><span class="stat-trend">SPENT THIS MONTH</span></div>
+              <strong id="stat-month-out">$0.00</strong>
+              <span class="stat-caption">Little treats and everyday things</span>
+            </article>
+          </section>
+
+          <section class="workspace-grid" id="activity">
+            <article class="activity-card panel-card">
+              <div class="panel-heading">
+                <div><p class="card-label">YOUR MONEY TRAIL</p><h2>Recent activity</h2></div>
+                <div class="activity-heading-actions"><span class="entry-count" id="activity-count">0 entries</span><button class="reset-data" type="button" data-reset-data>Reset example</button></div>
+              </div>
+              <div class="activity-list" id="activity-list"></div>
+              <div class="activity-empty" id="activity-empty" hidden>
+                <span class="empty-art"><svg class="icon"><use href="#icon-sprout"></use></svg></span>
+                <strong>Your trail starts here.</strong>
+                <p>Log your first bit of money in or out to see it appear.</p>
+              </div>
+            </article>
+
+            <article class="entry-card panel-card" id="log-entry">
+              <div class="panel-heading entry-heading">
+                <div><p class="card-label">KEEP IT GROWING</p><h2>Log a moment</h2></div>
+                <span class="entry-star"><svg class="icon"><use href="#icon-sparkle"></use></svg></span>
+              </div>
+              <div class="type-toggle" role="group" aria-label="Choose transaction type">
+                <button class="type-button active" type="button" data-entry-type="in" aria-pressed="true"><span class="type-mark">+</span> Money in</button>
+                <button class="type-button" type="button" data-entry-type="out" aria-pressed="false"><span class="type-mark">-</span> Money out</button>
+              </div>
+              <form id="entry-form" novalidate>
+                <label class="field-label" for="entry-amount">Amount</label>
+                <div class="input-with-prefix"><span>$</span><input id="entry-amount" name="amount" type="number" inputmode="decimal" min="0.01" max="10000" step="0.01" placeholder="0.00" required /></div>
+                <label class="field-label" for="entry-name">What was it for?</label>
+                <input class="text-input" id="entry-name" name="name" type="text" maxlength="45" placeholder="e.g. Chores, slushie, birthday" required />
+                <label class="field-label" for="entry-date">Date</label>
+                <div class="date-input-wrap"><input class="text-input" id="entry-date" name="date" type="date" required /><svg class="icon"><use href="#icon-calendar"></use></svg></div>
+                <p class="form-error" id="entry-error" role="alert"></p>
+                <button class="button button-primary full-button" type="submit"><svg class="icon"><use href="#icon-plus"></use></svg><span id="entry-submit-label">Add money in</span></button>
+              </form>
+              <p class="entry-footnote"><svg class="icon"><use href="#icon-check"></use></svg> Save once a week to keep your buddy happy.</p>
+            </article>
+          </section>
+
+          <section class="bottom-note">
+            <span class="bottom-note-icon"><svg class="icon"><use href="#icon-sprout"></use></svg></span>
+            <p><strong>One small habit:</strong> add money as it happens. Seeing the whole trail makes the next choice feel easier.</p>
+            <span class="bottom-note-line"></span>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <div class="modal-backdrop" id="goal-modal" hidden>
+      <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="goal-modal-title">
+        <div class="modal-header">
+          <div><span class="modal-icon"><svg class="icon"><use href="#icon-target"></use></svg></span><div><p class="card-label">YOUR NEXT MILESTONE</p><h2 id="goal-modal-title">Shape your goal</h2></div></div>
+          <button class="icon-button" type="button" data-close-modal aria-label="Close goal settings"><svg class="icon"><use href="#icon-close"></use></svg></button>
+        </div>
+        <p class="modal-intro">Give your savings something specific to grow toward. You can change this anytime.</p>
+        <form id="goal-form" novalidate>
+          <label class="field-label" for="goal-name-input">What are you saving for?</label>
+          <input class="text-input" id="goal-name-input" name="goal-name" type="text" maxlength="45" placeholder="e.g. New headphones" required />
+          <div class="modal-fields-row">
+            <div><label class="field-label" for="goal-amount-input">Target amount</label><div class="input-with-prefix"><span>$</span><input id="goal-amount-input" name="target" type="number" inputmode="decimal" min="0.01" max="100000" step="0.01" placeholder="60.00" required /></div></div>
+            <div><label class="field-label" for="goal-deadline-input">Target date</label><input class="text-input" id="goal-deadline-input" name="deadline" type="date" required /></div>
+          </div>
+          <p class="form-error" id="goal-error" role="alert"></p>
+          <div class="modal-actions"><button class="button button-quiet" type="button" data-close-modal>Cancel</button><button class="button button-primary" type="submit"><svg class="icon"><use href="#icon-sparkle"></use></svg>Save goal</button></div>
+        </form>
+      </section>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden>
+      <svg class="icon"><use href="#icon-check"></use></svg><span id="toast-message"></span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
